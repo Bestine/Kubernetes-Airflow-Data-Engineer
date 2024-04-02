@@ -4,6 +4,9 @@ webserverSecretkey: U01KSDF1dHY3cHd4MU82WFFkTkw1R0JCdTdMWDJDNGo=
 
 executor : "KubernetesExecutor"
 
+
+#Portforward command -> `kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow` 
+
 ##########--END OF OVERRIDING --##############
 
 
