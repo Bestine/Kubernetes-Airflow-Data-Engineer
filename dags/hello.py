@@ -26,3 +26,5 @@ t2 = BashOperator(
     bash_command='echo "hello the-ape-labs"',
     dag= dag
 )
+
+# Set the upstream 
