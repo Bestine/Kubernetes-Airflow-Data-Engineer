@@ -28,3 +28,5 @@ t2 = BashOperator(
 )
 
 # Set the upstream 
+t1 >> t2
+# t1 is the upstream of t2, t2 is the downstream for t1

@@ -5,6 +5,17 @@ webserverSecretkey: U01KSDF1dHY3cHd4MU82WFFkTkw1R0JCdTdMWDJDNGo=
 executor : "KubernetesExecutor"
 
 
-#Portforward command -> `kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow` 
+#Portforward command -> `kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow`
+# geting admin secret command -> `kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath={".datatoken"} | base64 -d`
+
+dags:
+  gitSync:
+    enabled: true
+    repo: https://github.com/Bestine/Kubernetes-Airflow-Data-Engineer.git
+    branch: main
+    rev: HEAD
+    depth: 1
+    maxFailures: 0
+    subPath: "dags"
 
 ##########--END OF OVERRIDING --##############
