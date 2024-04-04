@@ -75,4 +75,4 @@ preview_data_from_url = PythonOperator(
 
 
 # set upstream and downstream
-get_data >> preview_data
+get_data_from_url >> preview_data_from_url
